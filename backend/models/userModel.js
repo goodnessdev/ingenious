@@ -85,7 +85,7 @@ userSchema.statics.login = async function (email, password) {
     }
     
     if (!validator.isStrongPassword(password)) {
-        throw Error("Password not strong enough")
+        throw Error("Password not strong enough! It should contain both uppercase and lowercase alphabets, a number and a special character");
     }
 
     const match = await bcrypt.compare(password, user.password);

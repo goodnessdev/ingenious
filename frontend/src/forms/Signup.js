@@ -109,7 +109,7 @@ const Signup = () => {
           </button>
         </div>
         {error && (
-          <div className="text-amber-700 mx-auto bg-gray-200 border-2 p-2 rounded-2xl w-fit">
+          <div className="text-red-500 mx-auto bg-gray-200 border-2 p-2 rounded-2xl w-fit">
             {error}
           </div>
         )}
