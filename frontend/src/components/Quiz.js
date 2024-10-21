@@ -10,20 +10,19 @@ import Footer from "./Footer";
 const Quiz = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext);
   const theme = isLightTheme ? light : dark;
-
   const [queries, setQueries] = useState(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
       const response = await fetch("/api/quiz");
-      const data = await response.json();
+      const json = await response.json();
 
       if (response.ok) {
-        setQueries(data);
+        setQueries(json);
       }
     };
 
-    fetchQuestions();
+      fetchQuestions();
   }, []);
 
   return (

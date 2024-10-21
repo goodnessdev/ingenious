@@ -11,7 +11,6 @@ export const useLogout = () => {
         dispatch({type: 'LOGOUT'})
     }
 
-    // const entries = Object.entries(logout)
     return {logout}
 
 }
