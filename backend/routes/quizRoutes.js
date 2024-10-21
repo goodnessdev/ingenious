@@ -3,11 +3,11 @@ const {
     getQuestions,
     createQuestion
 } = require('../controllers/quizController');
-// const requireAuth = require('../middleware/requireAuth');
+const requireAuth = require('../middleware/requireAuth');
 
 const router = express.Router();
 
-// router.use(requireAuth);
+router.use(requireAuth);
 
 // Endpoint to get quiz questions
 router.get('/', getQuestions);
