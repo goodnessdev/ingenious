@@ -1,8 +1,5 @@
-import { useState, useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { useState } from "react";
 
-import Authentication from "./Authentication";
-import Themes from "./Themes";
 
 const QuestionDetails = ({ query, index }) => {
   const [correctionMessage, setCorrectionMessage] = useState(null);
